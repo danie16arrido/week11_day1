@@ -1,35 +1,39 @@
-var list = document.getElementsByClassName('cat');
-console.log(list);
 
 var app = function () {
+  var data = {
+    catName: "Lucipurr",
+    catsFood: "Dog's heart",
+    catsImg: "https://img.wikinut.com/img/19cgiwd67cvbziym/jpeg/0/Satanic-Cat.jpeg"
+  }
   var ulElement = document.createElement('ul');
   ulElement.classList.add('cat');
   // console.log( ulElement );
 
   var nameElement = document.createElement('li');
-  nameElement.innerText = "name: Gato";
+  nameElement.innerText = "Name: " + data.catName;
   // console.log( nameElement );
 
   var foodElement = document.createElement('li');
-  foodElement.innerText = "Favorite Food: Tuna";
+  foodElement.innerText = "Favorite Food: " +  data.catsFood;
   // console.log( foodElement );
 
   var picElement = document.createElement('li');
-  var imgEleement = document.createElement('img');
+  var imgElement = document.createElement('img');
+  imgElement.src = data.catsImg;
+  imgElement.width = 500;
 
-  picElement.appendChild( imgEleement );
+  picElement.appendChild( imgElement );
   // console.log( picElement );
 
   ulElement.appendChild( nameElement );
   ulElement.appendChild( foodElement );
   ulElement.appendChild( picElement );
   console.log( ulElement );
+  var list = document.getElementById('cats');
+  console.log(list);
+  list.appendChild(ulElement);
+  
+
 };
 
 window.onload = app;
-
-  // <ul class="cat">
-  //     <li>Name: Boba</li>
-  //     <li>Favourite food: Sock fluff</li>
-  //     <li><img width="500" src="http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg"></li>
-  //   </ul>
