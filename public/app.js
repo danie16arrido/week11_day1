@@ -35,7 +35,7 @@ var createUlclass = function( className ) {
   return ulElement;
 };
 
-var createLiElement = function ( header, param ) {
+var createLiElement = function ( header, param, className ) {
   var liElement = document.createElement( 'li' );
   liElement.innerText = header + ": " + param;
   return liElement;

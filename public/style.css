@@ -6,3 +6,25 @@
 .red-quote{
   color: red;
 }
+
+#cats {
+  background-color: lavender;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+  
+}
+
+img {
+  width: 500;
+  height: auto;
+  border-radius: 50% 50%;
+  overflow: hidden;
+}
+
+li {
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
